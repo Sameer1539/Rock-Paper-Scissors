@@ -67,18 +67,6 @@ function game() {
     }
 }
 
-rockBtn.addEventListener('click', () => {
-    const playerSelection = "Rock";
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-});
-paperBtn.addEventListener('click', () => {
-    const playerSelection = "Paper";
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-});
-scissorsBtn.addEventListener('click', () => {
-    const playerSelection = "Scissors";
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-});
+rockBtn.addEventListener('click', () => console.log(playRound("Rock", getComputerChoice())));
+paperBtn.addEventListener('click', () => console.log(playRound("Paper", getComputerChoice())));
+scissorsBtn.addEventListener('click', () => console.log(playRound("Scissors", getComputerChoice())));
