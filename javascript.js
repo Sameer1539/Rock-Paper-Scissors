@@ -1,19 +1,3 @@
-const body = document.querySelector('body');
-
-const rockBtn = document.createElement('button');
-const paperBtn = document.createElement('button');
-const scissorsBtn = document.createElement('button');
-
-rockBtn.textContent = "Rock";
-paperBtn.textContent = "Paper";
-scissorsBtn.textContent = "Scissors";
-
-
-body.appendChild(rockBtn);
-body.appendChild(paperBtn);
-body.appendChild(scissorsBtn);
-
-
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3);
     let choice = "";
@@ -67,10 +51,24 @@ function game() {
     }
 }
 
+const body = document.querySelector('body');
+
+const rockBtn = document.createElement('button');
+const paperBtn = document.createElement('button');
+const scissorsBtn = document.createElement('button');
 const div = document.createElement('div');
 
 rockBtn.addEventListener('click', () => div.textContent = `${playRound("Rock", getComputerChoice())}`);
 paperBtn.addEventListener('click', () => div.textContent = `${playRound("Paper", getComputerChoice())}`);
 scissorsBtn.addEventListener('click', () => div.textContent = `${playRound("Scissors", getComputerChoice())}`);
 
+rockBtn.textContent = "Rock";
+paperBtn.textContent = "Paper";
+scissorsBtn.textContent = "Scissors";
+
+
+body.appendChild(rockBtn);
+body.appendChild(paperBtn);
+body.appendChild(scissorsBtn);
 body.appendChild(div);
+
