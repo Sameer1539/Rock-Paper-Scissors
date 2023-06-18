@@ -1,3 +1,19 @@
+const body = document.querySelector('body');
+
+const rockBtn = document.createElement('button');
+const paperBtn = document.createElement('button');
+const scissorsBtn = document.createElement('button');
+
+rockBtn.textContent = "Rock";
+paperBtn.textContent = "Paper";
+scissorsBtn.textContent = "Scissors";
+
+
+body.appendChild(rockBtn);
+body.appendChild(paperBtn);
+body.appendChild(scissorsBtn);
+
+
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3);
     let choice = "";
@@ -50,4 +66,19 @@ function game() {
         console.log("Play again, it's a tie score!");
     }
 }
-console.log(game());
+
+rockBtn.addEventListener('click', () => {
+    const playerSelection = "Rock";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+});
+paperBtn.addEventListener('click', () => {
+    const playerSelection = "Paper";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+});
+scissorsBtn.addEventListener('click', () => {
+    const playerSelection = "Scissors";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+});
