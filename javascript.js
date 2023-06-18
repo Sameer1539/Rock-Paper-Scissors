@@ -67,6 +67,10 @@ function game() {
     }
 }
 
-rockBtn.addEventListener('click', () => console.log(playRound("Rock", getComputerChoice())));
-paperBtn.addEventListener('click', () => console.log(playRound("Paper", getComputerChoice())));
-scissorsBtn.addEventListener('click', () => console.log(playRound("Scissors", getComputerChoice())));
+const div = document.createElement('div');
+
+rockBtn.addEventListener('click', () => div.textContent = `${playRound("Rock", getComputerChoice())}`);
+paperBtn.addEventListener('click', () => div.textContent = `${playRound("Paper", getComputerChoice())}`);
+scissorsBtn.addEventListener('click', () => div.textContent = `${playRound("Scissors", getComputerChoice())}`);
+
+body.appendChild(div);
